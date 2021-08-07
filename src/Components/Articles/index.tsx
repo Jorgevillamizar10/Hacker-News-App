@@ -1,7 +1,9 @@
-import React,{ useState } from 'react';
-import { StyledContainer, StyledSelect } from './styles';
+import React, { useState } from 'react';
+import CardArticles from "../CardArticles/index";
 import { activeStyled } from "./helpers";
 import { selectData } from './options';
+
+import { StyledContainer, StyledSelect, ContainerCards } from './styles';
 
 
 interface ValuesTypes {
@@ -31,6 +33,12 @@ const Articles:React.FC = () => {
           control: activeStyled,
         }}
       />
+      <ContainerCards>
+        <CardArticles />
+        <CardArticles />
+        <CardArticles />
+        <CardArticles />
+      </ContainerCards>
     </StyledContainer>
   );
 }

@@ -1,0 +1,1 @@
+export const ENTRYPOINT = "http://hn.algolia.com/api/v1/"; //production api

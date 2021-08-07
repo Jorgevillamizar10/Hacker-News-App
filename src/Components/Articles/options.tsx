@@ -9,7 +9,7 @@ export const selectData = [
     value: "angular",
     label: (
       <SelectContainer>
-        <img src={AngularImg} alt="Angular Image" />
+        <img src={AngularImg} alt="Angular" />
         <p>Angular</p>
       </SelectContainer>
     ),
@@ -18,7 +18,7 @@ export const selectData = [
     value: "reactjs",
     label: (
       <SelectContainer>
-        <img src={ReactImg} alt="React Image" />
+        <img src={ReactImg} alt="React" />
         <p>React</p>
       </SelectContainer>
     ),
@@ -27,7 +27,7 @@ export const selectData = [
     value: "vuejs",
     label: (
       <SelectContainer>
-        <img src={VueImg} alt="Vuejs Image" />
+        <img src={VueImg} alt="Vuejs" />
         <p>Vuejs</p>
       </SelectContainer>
     ),

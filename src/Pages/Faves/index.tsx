@@ -1,7 +1,7 @@
 import React from 'react';
 import Articles from '../../Components/Articles/index';
 
-const HomePage:React.FC = () => {
+const FavesPage:React.FC = () => {
 
   return (
     <>
@@ -11,4 +11,4 @@ const HomePage:React.FC = () => {
 
 }
 
-export default HomePage;
+export default FavesPage;
