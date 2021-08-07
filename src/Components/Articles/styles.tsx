@@ -19,7 +19,7 @@ export const StyledSelect = styled(Select)`
 export const StyledContainer = styled.section`
   width: 100%;
   height:100vh;
-  padding: 44px 1082px 0px 150px;
+  padding: 44px 150px 150px 150px;
   & img{
     width: 24px;
     height: 24px;
@@ -40,4 +40,15 @@ export const SelectContainer = styled.div`
   align-items: center;
   height: fit-content;
   padding: 5px 0px;
+`;
+
+export const ContainerCards = styled.div`
+  width: 100%;
+  height: auto;
+  /* background:red; */
+  margin-top:60px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  flex-wrap: wrap;
 `;

@@ -1,9 +1,16 @@
 import React from 'react';
-import HomePage from './Pages/Home/index';
+import Header from './Components/Header/index';
+import { Routes } from './Routes';
+
+import './Styles/App.css';
 
 const App:React.FC = () => {
+
   return (
-    <HomePage />
+    <div className="container">
+      <Header />
+      <Routes />
+    </div>
   );
 }
 
