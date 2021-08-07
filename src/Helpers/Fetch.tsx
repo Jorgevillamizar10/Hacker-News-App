@@ -1,12 +1,19 @@
-import { ENTRYPOINT } from '../Config/index';
+import { ENTRYPOINT, DEFAULTURL } from '../Config/index';
 
 interface fetchDataProps {
-  endpoint: string;
+  endpoint?: string;
+  page: number;
 }
 
-export const fetchData = async ({ endpoint } :fetchDataProps) => {
-  const url = `${ENTRYPOINT}${endpoint}`;
+export const fetchData = async ({ endpoint, page } :fetchDataProps) => {
+  const url = `${ENTRYPOINT}query=${endpoint}&page=${page}`;
+  let response;
 
-  const response = await fetch(url);
-  return await response.json();
+  if(endpoint){
+    response = await fetch(url);
+    return response.json();
+  }else{
+    response = await fetch( `${DEFAULTURL}${page}`);
+    return response.json();
+  }
 }

@@ -1,43 +1,24 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { getFormatArray } from '../../Helpers/FormatArray';
+import { ArticlesProps } from '../../Types';
 import CardArticles from "../CardArticles/index";
-import { activeStyled } from "./helpers";
-import { selectData } from './options';
 
-import { StyledContainer, StyledSelect, ContainerCards } from './styles';
+import { StyledContainer, ContainerCards } from './styles';
 
 
-interface ValuesTypes {
-  value: string;
-  label: any;
-};
+const Articles:React.FC<ArticlesProps> = ({ data }) => {
+  let dataSort = getFormatArray(data !== undefined ? data : []);
 
-const Articles:React.FC = () => {
-
-  const [framework,setFramework] = useState();
-
-  const handleSelectChange = (values: ValuesTypes) => {
-    window.localStorage.setItem("filter", values.value);
-    // setCurrentFilter(values);
-  };
+  console.log("here",dataSort);
 
   return (
     <StyledContainer>
-      <StyledSelect
-        name="select-framework"
-        onChange={handleSelectChange}
-        value={framework}
-        placeholder="Select your news"
-        options={selectData}
-        isSearchable={false}
-        styles={{
-          control: activeStyled,
-        }}
-      />
       <ContainerCards>
-        <CardArticles />
-        <CardArticles />
-        <CardArticles />
-        <CardArticles />
+        {
+          dataSort?.map((article,index) => (
+            <CardArticles key={index} {...article} />
+          ))
+        }
       </ContainerCards>
     </StyledContainer>
   );
