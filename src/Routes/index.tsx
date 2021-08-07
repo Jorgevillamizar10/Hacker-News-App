@@ -11,10 +11,10 @@ export const Routes = () => {
     <BrowserRouter>
       <Taps active={activeTap} setActive={setActiveTap} />
       <Switch>
-        <Route path="/">
+        <Route exact path="/">
           <HomePage />
         </Route>
-        <Route path="/faves">
+        <Route exact path="/faves">
           <FavesPage />
         </Route>
       </Switch>

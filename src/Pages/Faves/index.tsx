@@ -5,7 +5,7 @@ const FavesPage:React.FC = () => {
 
   return (
     <>
-      <Articles />
+      <Articles data={[]}/>
     </>
   );
 

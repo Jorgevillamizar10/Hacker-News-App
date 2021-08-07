@@ -7,10 +7,15 @@ export const StyledCard = styled.div`
   width: 550px;
   height: 90px;
   margin: 38px 0px 30px 0px;
-  opacity: 0.8;
   border-radius: 6px;
-  border: solid 1px #979797;
+  border: 1px solid rgba(151, 151, 151, 0.8);
   background-color: #fff;
+  cursor:pointer;
+  transition: opacity 0.3s;
+  opacity: 1;
+  & :hover{
+    opacity: 0.4;
+  }
 `;
 
 export const ContainerInformation = styled.div`
