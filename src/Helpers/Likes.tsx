@@ -8,8 +8,8 @@ const ID_Like = 'like';
  */
 
 export const getLike = () => {
-  const like = window.localStorage.getItem(ID_Like)
-  return like ? JSON.parse(like) : []
+  const like = window.localStorage.getItem(ID_Like);
+  return like ? JSON.parse(like) : [];
 }
 
 /**
@@ -20,7 +20,7 @@ export const saveLike = (like:dataProps) => {
   let Sliked = getLike();
   Sliked.push(like);
 
-  window.localStorage.setItem(ID_Like, JSON.stringify(Sliked))
+  window.localStorage.setItem(ID_Like, JSON.stringify(Sliked));
 }
 
 /**
@@ -28,18 +28,18 @@ export const saveLike = (like:dataProps) => {
  * * Function to destroy like saved in localStorage
  */
 export const destroyLike = () => {
-  window.localStorage.removeItem(ID_Like)
+  window.localStorage.removeItem(ID_Like);
 }
 
 export const destroyIdLike = (id: string) => {
   let position = null;
   let articles = getLike();
   articles.forEach((infor: dataProps,index: number) => {
-    if(infor.id === id){
+    if(infor.objectID === id){
       position = index;
     }
   })
 
   articles.splice(position,1);
-  window.localStorage.setItem(ID_Like, JSON.stringify(articles))
+  window.localStorage.setItem(ID_Like, JSON.stringify(articles));
 }

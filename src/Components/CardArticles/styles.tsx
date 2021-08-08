@@ -13,7 +13,7 @@ export const StyledCard = styled.div`
   cursor:pointer;
   transition: opacity 0.3s;
   opacity: 1;
-  & :hover{
+  &:hover{
     opacity: 0.4;
   }
 `;
@@ -79,4 +79,8 @@ export const TimeText = styled.p`
   line-height: normal;
   letter-spacing: normal;
   color: #767676;
+`;
+
+export const StyledAnchor = styled.a`
+  text-decoration: none;
 `;
