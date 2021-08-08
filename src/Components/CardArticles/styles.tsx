@@ -16,11 +16,24 @@ export const StyledCard = styled.div`
   &:hover{
     opacity: 0.4;
   }
+  @media(max-width:620px){
+    width: 90%;
+  }
+  @media(max-width:450px){
+    margin: 15px 0px;
+  }
 `;
 
 export const ContainerInformation = styled.div`
   padding: 10px 15px 10px 26px;
   width: 482px;
+  @media(max-width:620px){
+    width: 100%;
+    padding: 10px 10px 10px 10px;
+  }
+  @media(max-width:450px){
+    height: 100%;
+  }
 `;
 
 export const BoxHeart = styled.div`
@@ -34,6 +47,10 @@ export const BoxHeart = styled.div`
   border-radius: 6px;
   border: none;
   background-color: rgba(96,96,96,0.06);
+  @media(max-width:620px){
+    width: 15%;
+    margin: 0;
+  }
 `;
 
 export const HeartImg = styled.img`
@@ -67,6 +84,9 @@ export const StyledText = styled.p`
   line-height: 1.43;
   letter-spacing: 0.25px;
   color: #6b6b6b;
+  @media(max-width:450px){
+    font-size: 12px !important;
+  }
 `;
 
 export const TimeText = styled.p`
@@ -79,8 +99,14 @@ export const TimeText = styled.p`
   line-height: normal;
   letter-spacing: normal;
   color: #767676;
+  @media(max-width:450px){
+    font-size: 9px !important;
+  }
 `;
 
 export const StyledAnchor = styled.a`
   text-decoration: none;
+  @media(max-width:620px){
+    width: 85%;
+  }
 `;

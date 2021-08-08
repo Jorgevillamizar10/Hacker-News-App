@@ -12,5 +12,14 @@ export const StyledBox = styled.div`
     font-family: 'Roboto',sans-serif;
     letter-spacing: 0.25px;
     color: #6b6b6b;
+    @media(max-width:620px){
+      font-size: 18px;
+    }
+    @media(max-width:430px){
+      font-size: 14px;
+    }
+  }
+  @media(max-width:620px){
+    height: 30vh;
   }
 `;

@@ -10,6 +10,9 @@ export const ContainerPagination = styled.section`
   justify-content: center;
   width: 100%;
   height:120px;
+  @media(max-width:470px){
+    flex-wrap: wrap;
+  }
 `;
 
 export const StyledCard  = styled.div<StyledCardProps>`
