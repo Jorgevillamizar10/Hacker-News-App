@@ -8,8 +8,6 @@ export const getNumberPages = (limitPage: number) => {
   return obj;
 }
 
-console.log(window.innerWidth);
-
 export const getHigherBracket = (currentPage:number, pageLimit:number) => currentPage + 3 >= pageLimit ? pageLimit - currentPage : 3 + (currentPage - 3 <= 0 ? 5 - currentPage: 0);
 
 export const getLowerBracket = (currentPage:number, pageLimit:number) => currentPage - 3 <= 0 ? currentPage - 1 : 3 + (currentPage + 3 >= pageLimit ? 4 - (pageLimit - currentPage) : 0);
