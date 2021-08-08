@@ -13,7 +13,8 @@ import {
   TimeText,
   ContainerInformation,
   WatchImg,
-  HeartImg
+  HeartImg,
+  StyledAnchor
 } from './styles';
 import { destroyIdLike , getLike, saveLike } from "../../Helpers/Likes";
 
@@ -53,13 +54,15 @@ const CardArticles: React.FC<dataProps> = ({
 
   return(
     <StyledCard>
-      <ContainerInformation>
-        <TimeBox>
-          <WatchImg src={Watch} alt="watch"/>
-          <TimeText>{timeago.format(created_at ?? "")} by {author}</TimeText>
-        </TimeBox>
-        <StyledText>{story_title}</StyledText>
-      </ContainerInformation>
+      <StyledAnchor href={story_url} target="_blank">
+        <ContainerInformation>
+          <TimeBox>
+            <WatchImg src={Watch} alt="watch"/>
+            <TimeText>{timeago.format(created_at ?? "")} by {author}</TimeText>
+          </TimeBox>
+          <StyledText>{story_title}</StyledText>
+        </ContainerInformation>
+      </StyledAnchor>
       <BoxHeart>
         <HeartImg src={isActive ? Heart : EmptyHeart} alt="heart" onClick={() => handleLikes(id ?? "")}/>
       </BoxHeart>

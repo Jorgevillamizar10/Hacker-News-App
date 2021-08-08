@@ -10,5 +10,7 @@ export const StyledBox = styled.div`
     font-size: 25px;
     font-weight: normal;
     font-family: 'Roboto',sans-serif;
+    letter-spacing: 0.25px;
+    color: #6b6b6b;
   }
 `;
