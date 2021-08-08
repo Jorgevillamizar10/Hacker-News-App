@@ -5,7 +5,6 @@ export const StyledContainer = styled.section`
   width: 100%;
   height:auto;
   padding: 0px 150px 150px 150px;
-  /* background:Red; */
   & img{
     width: 24px;
     height: 24px;
@@ -19,6 +18,13 @@ export const StyledContainer = styled.section`
     color: #343434;
     margin: 0px;
   }
+
+  @media(max-width:900px){
+    padding: 0px 5% 100px 5%;
+  }
+  @media(max-width:450px){
+    padding: 0px 5% 30px 5%;
+  }
 `;
 
 export const ContainerCards = styled.div`
@@ -30,4 +36,8 @@ export const ContainerCards = styled.div`
   align-items: flex-start;
   justify-content: space-between;
   flex-wrap: wrap;
+  @media(max-width:900px){
+    align-items: center;
+    justify-content: center;
+  }
 `;

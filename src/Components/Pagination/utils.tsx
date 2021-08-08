@@ -1,4 +1,3 @@
-
 export const getNumberPages = (limitPage: number) => {
   const obj:Array<number> = [];
 
@@ -8,6 +7,8 @@ export const getNumberPages = (limitPage: number) => {
 
   return obj;
 }
+
+console.log(window.innerWidth);
 
 export const getHigherBracket = (currentPage:number, pageLimit:number) => currentPage + 3 >= pageLimit ? pageLimit - currentPage : 3 + (currentPage - 3 <= 0 ? 5 - currentPage: 0);
 

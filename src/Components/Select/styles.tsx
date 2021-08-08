@@ -40,6 +40,9 @@ export const StyledContainer = styled.section`
     color: #343434;
     margin: 0px;
   }
+  @media(max-width:900px){
+    padding: 0px 0px 0px 5%;
+  }
 `;
 
 export const ContainerCards = styled.div`

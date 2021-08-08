@@ -6,3 +6,9 @@
   padding: 0 0 98px;
   background-color: #fcfcfc;
 }
+
+@media(max-width:450px){
+  .container{
+    padding: 0 0 30px;
+  }
+}
