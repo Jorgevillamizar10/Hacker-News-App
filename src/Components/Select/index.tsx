@@ -13,9 +13,10 @@ interface ValuesTypes {
 interface SelectProps {
   setFramework:React.ComponentState;
   framework:React.ComponentState;
+  setPage:React.ComponentState;
 };
 
-const Select:React.FC<SelectProps> = ({ framework, setFramework }) => {
+const Select:React.FC<SelectProps> = ({ framework, setFramework, setPage }) => {
 
   const [stateSelect,setStateSelect] = useState<Object>();
 
@@ -29,6 +30,7 @@ const Select:React.FC<SelectProps> = ({ framework, setFramework }) => {
     saveFramework(values.value);
     setFramework(values.value);
     setStateSelect(values);
+    setPage(0);
   };
 
   return (
