@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { dataProps } from "../../Types";
 import * as timeago from 'timeago.js';
 import Heart from "../../Assets/Card/heart.png";
@@ -15,14 +15,41 @@ import {
   WatchImg,
   HeartImg
 } from './styles';
+import { destroyIdLike , getLike, saveLike } from "../../Helpers/Likes";
 
 const CardArticles: React.FC<dataProps> = ({
   author,
   story_title,
-  created_at
+  created_at,
+  id,
+  story_url
 }) => {
 
   const [isActive, setIsActive] = useState(false);
+
+  useEffect(() => {
+    let verify = getLike();
+    verify.forEach((auxArticle:dataProps) => {
+      if(auxArticle.objectID === id){
+        setIsActive(true);
+      }
+    });
+  },[id]);
+
+  const handleLikes = (id: string) => {
+    setIsActive(!isActive);
+    if(isActive){
+      destroyIdLike(id);
+    }else if(!isActive){
+      saveLike({
+        objectID: id,
+        created_at: created_at,
+        story_title: story_title,
+        author: author,
+        story_url: story_url
+      })
+    }
+  }
 
   return(
     <StyledCard>
@@ -34,7 +61,7 @@ const CardArticles: React.FC<dataProps> = ({
         <StyledText>{story_title}</StyledText>
       </ContainerInformation>
       <BoxHeart>
-        <HeartImg src={isActive ? Heart : EmptyHeart} alt="heart" onClick={() => setIsActive(!isActive)}/>
+        <HeartImg src={isActive ? Heart : EmptyHeart} alt="heart" onClick={() => handleLikes(id ?? "")}/>
       </BoxHeart>
     </StyledCard>
   );

@@ -19,7 +19,8 @@ export const StyledCard = styled.div`
 `;
 
 export const ContainerInformation = styled.div`
-  padding: 10px 26px 10px 26px;
+  padding: 10px 15px 10px 26px;
+  width: 482px;
 `;
 
 export const BoxHeart = styled.div`
@@ -28,7 +29,7 @@ export const BoxHeart = styled.div`
   display:flex;
   align-items: center;
   justify-content: center;
-  /* margin: 0 0 0 16px; */
+  margin: 0 0 0 16px;
   /* padding: 35px 22px 33px; */
   border-radius: 6px;
   border: none;

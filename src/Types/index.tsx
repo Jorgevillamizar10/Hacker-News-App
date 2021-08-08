@@ -13,6 +13,7 @@ export interface dataProps {
   story_url?: string;
   title?: string;
   url?: string;
+  id?: string;
 }
 
 export interface ArticlesProps {

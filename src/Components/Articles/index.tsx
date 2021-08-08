@@ -9,8 +9,6 @@ import { StyledContainer, ContainerCards } from './styles';
 const Articles:React.FC<ArticlesProps> = ({ data }) => {
   let dataSort = getFormatArray(data !== undefined ? data : []);
 
-  console.log("here",dataSort);
-
   return (
     <StyledContainer>
       <ContainerCards>
