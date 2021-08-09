@@ -1,5 +1,5 @@
-import React from 'react';
-import { useHistory } from "react-router-dom";
+import React,{ useEffect } from 'react';
+import { useHistory, useLocation  } from "react-router-dom";
 import './styles.css';
 
 interface TapsProps {
@@ -10,6 +10,11 @@ interface TapsProps {
 const Taps:React.FC<TapsProps>  = ({ active, setActive })=> {
 
   const history = useHistory();
+  const location = useLocation();
+
+  useEffect(() => {
+    if(location.pathname === "/faves") setActive('Faves');
+  },[location.pathname,setActive]);
 
   const onHandleClick = (status: string) => {
     if(status === 'All'){
