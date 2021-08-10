@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {css} from 'styled-components';
 
 
 export const StyledContainer = styled.section`
@@ -27,17 +27,44 @@ export const StyledContainer = styled.section`
   }
 `;
 
-export const ContainerCards = styled.div`
+interface ContainerCardsProps {
+  flagArticles: Boolean;
+}
+
+export const ContainerCards = styled.div<ContainerCardsProps>`
   width: 100%;
   height: auto;
   /* background:red; */
   margin-top:10px;
   display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  ${
+    ({flagArticles}) => flagArticles ?
+    css`
+      align-items: flex-start;
+      justify-content: space-between;
+      flex-wrap: wrap; 
+    `
+    : 
+    css `
+      height: 30vh;
+      align-items: center;
+      justify-content: center;
+    `
+  }
   @media(max-width:900px){
     align-items: center;
     justify-content: center;
+  }
+`;
+
+export const StyledMessage = styled.span`
+  font-size: 24px;
+  font-weight: 400;
+  @media(max-width:740px){
+    font-size: 18px;
+  }
+  @media(max-width:550px){
+    font-size: 14px;
+    text-align:Center;
   }
 `;
