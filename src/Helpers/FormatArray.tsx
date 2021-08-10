@@ -10,6 +10,8 @@ export const getFormatArray = (auxData: Array<dataProps>) => {
       ){
         const { objectID, author, created_at, story_title, story_url } = article;
 
+        console.log("entro");
+
         return {id: objectID, author, created_at, story_title, story_url };
       }else{
         return undefined;
