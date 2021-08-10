@@ -23,7 +23,7 @@ const Articles:React.FC<ArticlesProps> = ({ data }) => {
             <CardArticles key={index} {...article} />
           )) :
           <StyledMessage>
-            En esta pagina no hay articulos por favor ve a la siguiente :D!
+            In this page we don't have articles, please go to the next page :D!
           </StyledMessage>
         }
       </ContainerCards>
